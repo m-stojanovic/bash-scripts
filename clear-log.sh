@@ -1,3 +1,10 @@
+###################################################################
+#Script Name    :clear-log.sh
+#Description    :Deletes log in specific directory
+#Date           :26-April-2020
+#Author         :Milos Stojanovic
+#Contact:       :https://www.linkedin.com/in/infomilosstojanovic/
+###################################################################
 #!/bin/bash
 ROOT_UID=0
 NOT_ROOT=99
