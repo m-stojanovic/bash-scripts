@@ -1,6 +1,6 @@
 ###################################################################
 #Script Name    :nagios-hosts_v1.sh
-#Description    :Put the hostnames from file, and create Nagios template
+#Description    :Takes the list of hostnames from file as input, and creates Nagios template
 #Date           :26-April-2020
 #Author         :Milos Stojanovic
 #Contact:       :https://www.linkedin.com/in/infomilosstojanovic/
