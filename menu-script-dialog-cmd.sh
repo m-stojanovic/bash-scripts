@@ -31,7 +31,7 @@ function memusage {
 while [ 1 ]
 do
 	dialog --menu "Sys Admin Menu" 30 40 5 1 "Display disk space" 2 "Display users" 3 "Display memory usage" 0 "Exit program" 2> $temp2
-	if [ $? -eq 1 ]
+	if [ $? -ne 0 ]
 	then
 		break
 	fi
