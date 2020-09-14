@@ -1,0 +1,7 @@
+repo_url_and_project="git@gitlab01.muc.ecircle.de:puppetmaster_puppet5"
+repo_configuration_name="configuration"
+repo_configuration="${repo_url_and_project}/${repo_configuration_name}.git"
+repo_module_prefix="bigdata-"
+puppetfile_name="Puppetfile"
+puppetfile_path="${repo_configuration_name}/${puppetfile_name}"
+envs=( bigdatalab bigdatastg bigdatal3 bigdataemc bigdatacroc )

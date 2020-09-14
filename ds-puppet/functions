@@ -1,0 +1,16 @@
+get_modules_repos() {
+  grep ${1} ${2} | sort | awk -F"'" '{print $2}'
+}
+
+get_repo_name() {
+  echo $1 | sed -e "s|${repo_url_and_project}/||" -e 's/.git//' -e "s/^${repo_module_prefix}//"
+}
+
+git_clone_single_branch() {
+  git clone --single-branch --branch ${1} ${2} $( get_repo_name $2 )
+}
+
+git_pull() {
+  echo "Pulling changes for ${1}"
+  git -C ${1} pull
+}
