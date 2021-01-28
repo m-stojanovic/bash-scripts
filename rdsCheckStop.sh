@@ -17,8 +17,8 @@ for i in "${!array1[@]}"; do
   str1=`ansible -i environments/aws/${array1[$i]}/inventory.yml host_group -m ping | grep '"unreachable": true'` 
 if [[ $str1 == $str2 ]]; then
  aws rds stop-db-instance --db-instance-identifier ${array2[$i]} --region ${array3[$i]} --profile ${array4[$i]}
- echo "Successfully stopped DB Instance ${array2[$i]}!"
-else                       
- echo "DB Instance is already stopped!"
+ echo "DB Instance ${array2[$i]} is stopped!"
+else 
+ echo "The environment for DB instance ${array2[$i]} is running! No need to stop!"
 fi                         
 done   
